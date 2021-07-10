@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+        <title>Social Media Page</title>
+    </head>
+
+    <body>
+
+        <h1>Social Media</h1>
+
+        <div class="topnav">
+            <a href="#home" onclick="document.location='index.html'">Home</a>
+            <a href="#TrueFalse" onclick="document.location='tf.html'">True/False Game</a>
+            <a href="#favorites" onclick="document.location='favorite.html'">Favorite Things</a>
+            <a class="active" href="#socials" onclick="document.location='social.html'">Social Media</a>
+        </div>
+
+        <br> <br>
+
+        <img src="Brandon1.jpg" alt="Brandon1" class="social-pics" width="200" height="200">
+        <img src="Brandon2.jpg" alt="Brandon2" class="social-pics" width="200" height="200">
+        <br><br>
+        <img src="Brandon3.jpg" alt="Brandon3" class="social-pics" width="200" height="200">
+        <img src="Brandon4.jpg" alt="Brandon4" class="social-pics" width="200" height="200">
+
+        <br><br>
+
+        <p>Like what you see? Want to find out more?</p>
+        <p>Here's where you can find me on social media:</p>
+
+        <ul class="unordered-list">
+            <li><button class="social-buttons" onclick="document.location='https://www.instagram.com/hrandonbong/?hl=en'">Instagram</button></li>
+            <li><button class="social-buttons" onclick="document.location='https://www.facebook.com/brandon.hong.39'">Facebook</button></li>
+            <li><button class="social-buttons" onclick="document.location='https://www.linkedin.com/in/hrandonbong/'">LinkedIn</button></li>
+        </ul>
+
+        <p>And, while you're at it, take a look at my resume:</p>
+
+        <a href="Brandon_Hong_Resume.pdf" download>
+            <button class="resume-button">Resume</button>
+        </a>
+
+        <p>Want to send a message? Fill out the form below.</p>
+
+        <form id="form1" method="POST" action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php">
+            <p><label for="name">Name:</label><br>
+            <input name="name" type="text" id="name" size="50" value=""></p>
+            <p><label for="email">Email:</label><br>
+            <input name="email" type="text" id="email" size="50" value=""></p>
+            <p><label for="message">Message:</label><br>
+            <textarea name="message" cols="50" rows="5" id="message" value=""></textarea></p>
+            <!--<button class="social-buttons" id="submit1" type="button">Submit</button>-->
+            <p><input class="social-buttons" id="submit1" type="submit" value="Submit"></p>
+        </form>
+
+        <p id="response1"></p>
+
+        <script>
+            document.getElementById("form1").addEventListener("submit", button1);
+            
+            function button1(){
+                alert("Please don't leave me. I'm lonely. Oh wait... I have a dog. Toodaloo moda f@$%^&");
+            }
+            
+        </script>
+
+    </body>
+</html>

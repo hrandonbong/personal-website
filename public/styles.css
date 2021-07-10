@@ -1,0 +1,296 @@
+/* ALL PAGES */
+/* Standard WebPage Body Layout */
+body {
+    font-family: 'Courier New', monospace;
+    text-align:center;
+    background-color:#34495E;
+    color:#DAF7A6;
+    margin: 0% 0% 10% 0%;
+}
+
+/* Standard Heading */
+ h1 {
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+/* Navigation Menu */
+.topnav {
+    width: 75%;
+    background-color: #000;
+    overflow: auto;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+
+/* Navigation Links */
+.topnav a {
+    float: left;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    width: 25%;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Background color on Mouse-over */
+.topnav a:hover {
+    background-color: #555;
+}
+
+/* Current/Active Link */
+.topnav a.active {
+    background-color: #FF7F50;
+}
+
+/* Add media responsiveness */
+@media screen and (max-width: 500px) {
+    .topnav a {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+/* INDEX */
+/* Homepage Images */
+.mySlides {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+/* Carousel Naviagtion Buttons */
+.c-display-left {
+    position: relative;
+    left:-20%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(-0%,-50%);
+}
+
+.c-display-right {
+    position: relative;
+    right: -20%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(0%,-50%);
+}
+
+.c-black, .c-hover-black:hover {
+    color: white!important;
+    background-color: #000!important;
+}
+
+.c-button {
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap
+}
+
+.c-button:hover {
+    color:white!important;
+    background-color:#555!important
+}
+
+
+
+/* SOCIAL */
+/* Social Page Pics */
+.social-pics {
+    border-radius: 50%;
+}
+
+/* Social Page Buttons */
+.social-buttons {
+    position: relative;
+    left: 1%;
+    background-color: #000;
+    color: white;
+    padding: 12px;
+}
+
+.social-buttons:hover {
+    color:white!important;
+    background-color:#555!important;
+}
+
+.unordered-list {
+    list-style-type: none;
+    margin-left: -4%;
+    margin-bottom: 5%;
+}
+
+li {
+    margin-bottom: 2%;
+}
+
+.resume-button {
+    position: relative;
+    top: 10px;
+    left: 0%;
+    background-color: #000;
+    color: white;
+    padding: 12px;
+    margin-bottom: 5%;
+}
+
+.resume-button:hover {
+    color:white!important;
+    background-color:#555!important;
+}
+
+#submit1{
+    position: relative;
+    left: -0.5%;
+}
+
+
+
+/* TRUE/FALSE */
+/* True/False Game Button */
+.tf-button {
+    background-color: #000;
+    color: white;
+    padding: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tf-button:hover {
+    color: white!important;
+    background-color: #555!important;
+}
+
+/* True/False Table Format */
+table {
+    width: 50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* Table Row Height for True/False */
+tr {
+    height: 75px;
+}
+
+/* Scroll-Box */
+.scroll-box {
+    overflow: scroll;
+    height: 100px;
+    width: 300px;
+    border: 8px solid #DAF7A6;
+    padding: 2%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    color: black;
+}
+
+
+
+/* FAVORITE */
+/* Favorite Things Columns */
+.column {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Favorite Things Rows */
+.row {
+    display:flex;
+    justify-content: center;
+}
+
+/* Image/Overlay Container */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Favorite Things Images */
+.image {
+    border-radius: 15px;
+}
+
+/* Image Overlays */
+.overlay1 {
+    position: absolute;
+    height: 200px;
+    width: 150px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #FF7F50;
+    border-radius: 15px;
+}
+
+ .overlay2 {
+    position: absolute;
+    height: 200px;
+    width: 250px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #FF7F50;
+    border-radius: 15px;
+}
+
+ .overlay3 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #FF7F50;
+    border-radius: 15px;
+}
+
+.overlay4 {
+    position: absolute;
+    height: 200px;
+    width: 325px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #FF7F50;
+    border-radius: 15px;
+}
+
+/* Overlay Hover Effect */
+.container:hover .overlay1 {
+    opacity: 1;
+}
+
+.container:hover .overlay2 {
+    opacity: 1;
+}
+
+.container:hover .overlay3 {
+    opacity: 1;
+}
+
+.container:hover .overlay4 {
+    opacity: 1;
+}
+
+/* Overlay Text */
+.text {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+        <title>True/False Page</title>
+    </head>
+
+    <body>
+
+        <h1>True/False Game</h1>
+
+        <div class="topnav">
+            <a href="#home" onclick="document.location='index.html'">Home</a>
+            <a class="active" href="#TrueFalse" onclick="document.location='tf.html'">True/False Game</a>
+            <a href="#favorites" onclick="document.location='favorite.html'">Favorite Things</a>
+            <a href="#socials" onclick="document.location='social.html'">Social Media</a>
+        </div>
+
+        <br> <br>
+        <p>See how well you know me by playing a game of true or false.</p>
+        <p>Select the answer you think is right and check your answers below to see how you did.</p>
+        <br>
+
+        <table>
+            <tr>
+            <td>I was born in South Korea.</td>
+            <td>
+             <select id="q1" name="q1">
+                <option value="" class="incorrect">True/False</option>
+                <option value="1" class="incorrect">True</option>
+                <option value="0" class="correct">False</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>I completed my undergraduate education at the Cal State Long Beach.</td>
+            <td>
+             <select id="q2" name="q2">
+                <option value="" class="incorrect">True/False</option>
+                <option value="1" class="correct">True</option>
+                <option value="0" class="incorrect">False</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>I completed my graduate degree at UCLA.</td>
+            <td>
+            <select id="q3" name="q3">
+                <option value="" class="incorrect">True/False</option>
+                <option value="1" class="correct">True</option>
+                <option value="0" class="incorrect">False</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>My graduate degree was in Computer Science.</td>
+            <td>
+            <select id="q4" name="q4">
+                <option value="" class="incorrect">True/False</option>
+                <option value="1" class="incorrect">True</option>
+                <option value="0" class="correct">False</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>I am an avid reader of manga.</td>
+            <td>
+            <select id="q5" name="q5">
+                <option value="" class="incorrect">True/False</option>
+                <option value="1" class="correct">True</option>
+                <option value="0" class="incorrect">False</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>I have traveled to all 50 states.</td>
+            <td>
+            <select id="q6" name="q6">
+                <option value="" class="incorrect">True/False</option>
+                <option value="1" class="incorrect">True</option>
+                <option value="0" class="correct">False</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>I have traveled outside of the United States.</td>
+            <td>
+            <select id="q7" name="q7">
+                <option value="" class="incorrect">True/False</option>
+                <option value="1" class="correct">True</option>
+                <option value="0" class="incorrect">False</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>I am an only child.</td>
+            <td>
+            <select id="q8" name="q8">
+                <option value="" class="incorrect">True/False</option>
+                <option value="1" class="incorrect">True</option>
+                <option value="0" class="correct">False</option>
+            </select>
+            </td>
+            </tr>
+        </table>
+
+        <br><br>
+
+        <input onclick="gradeTest()" name="submit" type="button" class="tf-button" value="Check My Answers"/>
+
+        <br><br>
+
+        <div class="scroll-box">
+            <p id="answer1"></p>
+            <p id="answer2"></p>
+            <p id="answer3"></p>
+            <p id="answer4"></p>
+            <p id="answer5"></p>
+            <p id="answer6"></p>
+            <p id="answer7"></p>
+            <p id="answer8"></p>
+            <p id="score"></p>
+        </div>
+        
+
+
+    <script>
+        function gradeTest() {
+            var totalQuestions = 8;
+            var correctAnswers = 0;
+            var alertText;
+            var answer1;
+            var answer2;
+            var answer3;
+            var answer4;
+            var answer5;
+            var answer6;
+            var answer7;
+            var answer8;
+
+            var q1 = document.getElementById('q1');
+                if(q1.selectedIndex == 2) {
+                    answer1 = "Correct";
+                    correctAnswers++;
+                    q1.style.backgroundColor = '#9fff80';
+                } else {
+                    answer1 = "Incorrect";
+                    q1.style.backgroundColor = '#ff6666';
+                }
+
+            var q2 = document.getElementById('q2');
+                if(q2.selectedIndex == 1) {
+                    answer2 = "Correct";
+                    correctAnswers++;
+                    q2.style.backgroundColor = '#9fff80';
+                } else {
+                    answer2 = "Incorrect";
+                    q2.style.backgroundColor = '#ff6666';
+                }
+
+            var q3 = document.getElementById('q3');
+                if(q3.selectedIndex == 1) {
+                    answer3 = "Correct";
+                    correctAnswers++;
+                    q3.style.backgroundColor = '#9fff80';
+                } else {
+                    answer3 = "Incorrect";
+                    q3.style.backgroundColor = '#ff6666';
+                }
+
+            var q4 = document.getElementById('q4');
+                if(q4.selectedIndex == 2) {
+                    answer4 = "Correct";
+                    correctAnswers++;
+                    q4.style.backgroundColor = '#9fff80';
+                } else {
+                    answer4 = "Incorrect";
+                    q4.style.backgroundColor = '#ff6666';
+                }
+
+            var q5 = document.getElementById('q5');
+                if(q5.selectedIndex == 1) {
+                    answer5 = "Correct";
+                    correctAnswers++;
+                    q5.style.backgroundColor = '#9fff80';
+                } else {
+                    answer5 = "Incorrect";
+                    q5.style.backgroundColor = '#ff6666';
+                }
+
+            var q6 = document.getElementById('q6');
+                if(q6.selectedIndex == 2) {
+                    answer6 = "Correct";
+                    correctAnswers++;
+                    q6.style.backgroundColor = '#9fff80';
+                } else {
+                    answer6 = "Incorrect";
+                    q6.style.backgroundColor = '#ff6666';
+                }
+
+            var q7 = document.getElementById('q7');
+                if(q7.selectedIndex == 1) {
+                    answer7 = "Correct";
+                    correctAnswers++;
+                    q7.style.backgroundColor = '#9fff80';
+                } else {
+                    answer7 = "Incorrect";
+                    q7.style.backgroundColor = '#ff6666';
+                }
+
+            var q8 = document.getElementById('q8');
+                if(q8.selectedIndex == 2) {
+                    answer8 = "Correct";
+                    correctAnswers++;
+                    q8.style.backgroundColor = '#9fff80';
+                } else {
+                    answer8 = "Incorrect";
+                    q8.style.backgroundColor = '#ff6666';
+                }
+
+            if(correctAnswers == totalQuestions) {
+                alertText = "Congrats! You got all the questions corect! :)";
+            }
+            else {
+                alertText = "You got " + correctAnswers + " out of " + totalQuestions + " correct.";
+            }
+            alert(alertText);
+
+            document.getElementById("answer1").innerHTML = "Answer 1 is " + answer1;
+            document.getElementById("answer2").innerHTML = "Answer 2 is " + answer2;
+            document.getElementById("answer3").innerHTML = "Answer 3 is " + answer3;
+            document.getElementById("answer4").innerHTML = "Answer 4 is " + answer4;
+            document.getElementById("answer5").innerHTML = "Answer 5 is " + answer5;
+            document.getElementById("answer6").innerHTML = "Answer 6 is " + answer6;
+            document.getElementById("answer7").innerHTML = "Answer 7 is " + answer7;
+            document.getElementById("answer8").innerHTML = "Answer 8 is " + answer8;
+            document.getElementById("score").innerHTML = "Final Score = " + correctAnswers + " / " + totalQuestions;
+
+        }
+    </script>
+
+    </body>
+</html>

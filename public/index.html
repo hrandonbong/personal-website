@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+        <title>My Homepage</title>
+    </head>
+
+    <body>
+        <h1>Welcome to Brandon's Homepage</h1>
+        <div class="topnav">
+            <a class="active" href="#home" onclick="document.location='index.html'">Home</a>
+            <a href="#TrueFalse" onclick="document.location='tf.html'">True/False Game</a>
+            <a href="#favorites" onclick="document.location='favorite.html'">Favorite Things</a>
+            <a href="#socials" onclick="document.location='social.html'">Social Media</a>
+        </div>
+        <br>
+        <div>
+            <img src="Brandon1.jpg" alt="Brandon1" class="mySlides" width="450" height="450">
+            <img src="Hero1.jpg" alt="Hero1" class="mySlides" width="450" height="450">
+            <img src="Hero2.jpg" alt="Hero2" class="mySlides" width="450" height="450">
+            <img src="Hero3.jpg" alt="Hero3" class="mySlides" width="450" height="450">
+            <img src="Hero4.jpg" alt="Hero4" class="mySlides" width="450" height="450">
+            <img src="Hero5.jpg" alt="Hero5" class="mySlides" width="450" height="450">
+            <img src="Hero6.jpg" alt="Hero6" class="mySlides" width="450" height="450">
+
+            <button class="c-button c-black c-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="c-button c-black c-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <br>
+        <p>Hi, I'm Brandon and welcome to my website!
+        <p>The first thing you need to know about me is that I have a dog named Hero. Feel free to navigate
+        through photos of him above and, to get to know me a little more, navigate through the webpages.</p>
+
+        <script>
+            var myIndex = 0;
+            carousel();
+    
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 3000);
+            }
+        </script>
+
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex - 1].style.display = "block";
+            }
+        </script>
+
+    </body>
+</html>
