@@ -13,10 +13,12 @@ app.use(express.static('public'));
 app.use('/static', express.static('public'))
 
 
+//If installed on a server
 //app.listen(app.get('port'), function(){
-  //console.log(`Express started on  http://${process.env.HOSTNAME}:${app.get('port')} press Ctrl-C to terminate.`);
+//  console.log(`Express started on  http://${process.env.HOSTNAME}:${app.get('port')} press Ctrl-C to terminate.`);
 //});
 
+//For local host use
 app.listen(app.get('port'), function(){
     console.log('Express started on  http://localhost:' + app.get('port') + ' press Ctrl-C to terminate.');
   });
